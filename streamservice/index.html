@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Sharif's Streaming Services DB</title>
+</head>
+<body>
+    <h1>Sharif's Streaming Services DB</h1>
+    <h2>Relations</h2>
+    <ol>
+        <li>Employee (20)</li>
+        <li>Customer (20)</li>
+        <li>Complaint (16)</li>
+        <li>Complaint_Details (16)</li>
+        <li>Customer_Locations (20)</li>
+        <li>Movie (26)</li>
+        <li>Actor (692)</li>
+        <li>Cast (718)</li>
+        <li>Genre (17)</li>
+        <li>Movie_Genre (65)</li>
+        <li>Streaming_Details (4976)</li>
+        <li>Platform (4976)</li>
+        <li>Movie_Rating (520)</li>
+        <li>Actor_Rating (14360)</li>
+        <li>Genre_Rating (340)</li>
+    </ol>
+    <h2>Relation Contents</h2>
+    <p><a href="php/relation_contents.php" target="_blank">Show Contents</a></p>
+    <h2>Relation Modification</h2>
+    <p><a href="php/add_emp.php" target="_blank">Add New Employee</a></p>
+    <h2>Reports (Business Goals)</h2>
+    <ol>
+        <li><a href="php/report_customer_genre_pop.php" target="_blank">Customer Genre Popularity</a></li>
+        <li><a href="php/report_customer_actor_pop.php" target="_blank">Customer Actor Popularity</a></li>
+        <li><a href="php/report_customer_platform.php" target="_blank">Customer Watch Platforms</a></li>
+        <li><a href="php/report_customer_stream_location.php" target="_blank">Customer Stream Locations</a></li>
+        <li><a href="php/report_customer_complaints.php" target="_blank">Customer Complaints</a></li>
+        <li><a href="php/report_customer_movie_count.php" target="_blank">Customer Movie Count</a></li>
+        <li><a href="php/report_year_movie_watch_count.php" target="_blank">Movie Watch Count</a></li>
+    </ol>
+</body>
+</html>
