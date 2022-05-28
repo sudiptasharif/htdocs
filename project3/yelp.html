@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Name: Sudipta Sharif-->
+<html lang="en">
+
+<head>
+  <title>Web Mashup</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="yelp.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="text/javascript" defer async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTfJuWp7pUZ6pEUisQnGXn54Yzv-WSwwU">
+    </script>
+  <script type="text/javascript" src="yelp.js"></script>
+</head>
+
+<body onload="initialize();">
+  <h1>Web Mashup: Display Best Restaurants on a Map</h1>
+  <form>
+    <label>Search Terms: <input type="text" id="search" /></label>
+    <input type="button" onclick="sendRequest();" value="Find" />
+  </form>
+  <div id="map"></div>
+  <div>&nbsp;</div>
+  <h3 id="info"></h3>
+  <div id="output">
+  </div>
+</body>
+</html>

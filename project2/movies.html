@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Name: Sudipta Sharif-->
+<head>
+  <title>Display Movie Information</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="movies.js"></script>
+  <link rel="stylesheet" href="movies.css">
+</head>
+
+<body onload="initialize();">
+  <div id="sql1"></div>
+  <div class="movie_app_container">
+    <div id="movie_search_form">
+      <h1>A Movie Web Application</h1>
+      <form>
+        <label>Movie title: <input type="text" id="form-input" /></label>
+        <input type="button" onclick="searchMoviesByTitle();" value="Display Info" />
+      </form>
+      <span id="wait_gui">searching for movie(s)...please wait!</span>
+    </div>
+    <div id="movie_app_search_result_container">
+      <div id="movie_list_container">
+        <div id="movie_list">
+          <h2>Movie Search List <span id="total_movies"></span></h2>
+          <h4 id="usage">Click To View Details</h4>
+          <ol id="movie_ordered_list"></ol>
+        </div>
+      </div>
+      <div id="selected_movie_details_container">
+        <h2>Poster</h2>
+        <div>
+          <img id="selected_movie_poster" src="" alt="selected_movie_poster">
+        </div>
+        <h2>Info</h2>
+        <div id="selected_movie_details">
+          <p id="movie_title">
+          <p>
+          <p id="movie_original_title"></p>
+          <p id="movie_release_year"></p>
+          <p id="movie_genres"></p>
+          <p id="movie_overview"></p>
+        </div>
+        <h2>Top Cast Members <span id="cast_msg"></span></h2>
+        <div id="selected_movie_cast_details">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

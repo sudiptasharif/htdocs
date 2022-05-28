@@ -1,0 +1,41 @@
+/**
+ * Name: Sudipta Sharif
+ */
+.movie_app_container {
+  /*width: 75%;
+  background-color: yellow;*/
+  text-align: center;
+  font-family: Georgia, serif;
+}
+#wait_gui{
+  visibility: hidden;
+}
+#movie_search_form {
+  text-align: center;
+  padding-bottom: 20px;
+}
+#movie_list {
+  /*background-color: coral;*/
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: left;
+}
+#selected_movie_details_container {
+  /*background-color: honeydew;*/
+  float: right;
+  width: 70%;
+  text-align: left;
+}
+#selected_movie_poster{
+  max-width: 100%;
+  max-height: 100%;
+}
+#movie_overview{
+  width: 50%;
+  word-wrap: break-word;
+}
+.actor{
+  width: 185px;
+  margin-right: 10px;
+}
