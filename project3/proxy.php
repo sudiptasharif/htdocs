@@ -1,7 +1,5 @@
 <?php
-  /**
-   * Name: Sudipta Sharif
-   */
+  // This file was provided by the prof
   // put your Yelp API key here:
   $API_KEY = '';
 

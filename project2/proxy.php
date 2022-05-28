@@ -1,7 +1,5 @@
 <?php
-  /**
-   * Name: Sudipta Sharif
-   */
+  // This file was provided by the prof
   // put your TMDb API key here:
   $api_key = "";
 
