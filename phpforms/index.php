@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>PHP Forms</title>
+        <title>GET Form</title>
     </head>
     <body>
         <h1>PHP Forms using GET</h1>
@@ -82,7 +82,12 @@
             <li>Radio Button: <em>value</em> attribute <strong>must</strong>be set. The value of checkbox sent to the server is <u>'on'</u> if selected when <u>'value'</u> attribute is not set</li>
         </ul>
         <?php
+        ln();
+        l('$_GET');
         d($_GET);
         ?>
+        <ul>
+            <li><a href="post.php">POST Form</a></li>
+        </ul>        
     </body>
 </html>
