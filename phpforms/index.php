@@ -7,6 +7,9 @@
     </head>
     <body>
         <h1>PHP Forms using GET</h1>
+        <p>The <strong><em>name</em></strong> attribute of the <strong><em>input</em></strong> tag is passed as the identifier of the corresponding input tag</p>
+        <p>The <strong><em>value</em></strong> attribute of the <strong><em>input</em></strong> tag is <u>usually but not always</u> passed as the initialized value of the corresponding input tag</p>
+        <p>You can use the browser's <strong>developer tools</strong> to see this under the <strong>network</strong> tab</p>
         <form>
             <p>
                 <label for="guess">Input Guess</label>

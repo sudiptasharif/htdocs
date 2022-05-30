@@ -11,6 +11,9 @@ $oldguess2 = isset($_POST['guess2']) ? $_POST['guess2'] : '';
     <body>
         <h1>PHP Forms using POST</h1>
         <h3>Many field types</h3>
+        <p>The <strong><em>name</em></strong> attribute of the <strong><em>input</em></strong> tag is passed as the identifier of the corresponding input tag</p>
+        <p>The <strong><em>value</em></strong> attribute of the <strong><em>input</em></strong> tag is <u>usually but not always</u> passed as the initialized value of the corresponding input tag</p>
+        <p>You can use the browser's <strong>developer tools</strong> to see this under the <strong>network</strong> tab</p>
         <form method="post" action="post.php">
             <p>Guessing game...</p>
             <p>
