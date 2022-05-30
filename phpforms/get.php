@@ -74,7 +74,7 @@
             <p>
                 <input type="submit" name="goget" value="Submit"/>
                 <input type="reset" />
-                <!-- This a neat trick to close the current page, not submit the form and return to a specefied page like the cancel button of a GUI form -->
+                <!-- This a neat trick to close the current page, not submit the form and return to a specified page like the cancel button of a GUI form -->
                 <input type="button" onclick="location.href='index.php'; return false;" value="Escape"/>
                 <?php ln(a("index.php", 'Reset this page')); ?>
             </p>
