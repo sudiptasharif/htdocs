@@ -53,10 +53,13 @@ if (isset($_POST['guess'])) {
                 <label for="guess">Input Guess</label>
                 <input type="text" name="guess" id="guess" size="40" value="<?=$guess?>"/>
                 <input type="submit"/>
+                <!-- This a neat trick to close the current page, not submit the form and return to a specified page like the cancel button of a GUI form -->
+                <input type="button" onclick="location.href='index.php'; return false;" value="Escape"/>
             </p>
         </form>
         <ul>
-            <li><a href="index.php">GET Form</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="get.php">GET Form</a></li>
             <li><a href="post.php">POST Form</a></li>
             <li><a href="mvc.php">MVC</a></li>
         </ul>            

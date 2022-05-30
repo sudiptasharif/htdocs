@@ -102,6 +102,8 @@ $oldguess2 = isset($_POST['guess2']) ? $_POST['guess2'] : '';
             <!-- If there was no name attribute this would not have been passed along with the request -->
             <!--<input type="submit"/>-->
             <input type="reset" name='myreset' value='Reset Form Controls'/>
+            <!-- This a neat trick to close the current page, not submit the form and return to a specified page like the cancel button of a GUI form -->
+            <input type="button" onclick="location.href = 'index.php'; return false;" value="Escape"/>
             <?php ln(a("post.php", 'Reset this page')); ?>
         </form>
         <?php
@@ -116,7 +118,8 @@ $oldguess2 = isset($_POST['guess2']) ? $_POST['guess2'] : '';
         }
         ?>
         <ul>
-            <li><a href="index.php">GET Form</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="get.php">GET Form</a></li>
             <li><a href="post.php">POST Form</a></li>
             <li><a href="mvc.php">MVC</a></li>
         </ul>     
