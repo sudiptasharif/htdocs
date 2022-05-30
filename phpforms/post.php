@@ -94,8 +94,11 @@ $oldguess2 = isset($_POST['guess2']) ? $_POST['guess2'] : '';
                 <br/>
                 (if you use a 'pre' tag to echo the contents of the textarea after the form submission you can print/display the inputs in the textarea with the original format preserving the newline chars)
             </p>
-            <input type="submit"/>
-            <input type="reset" />
+            <!-- The submit buttons name/value is passed to the server as key value pairs with the request -->
+            <input type="submit" name='mysubmit'/>
+            <!-- If there was no name attribute this would not have been passed along with the request -->
+            <!--<input type="submit"/>-->
+            <input type="reset" name='myreset' value='Reset Form Controls'/>
             <?php ln(a("post.php", 'Reset this page')); ?>
         </form>
         <?php
@@ -110,8 +113,10 @@ $oldguess2 = isset($_POST['guess2']) ? $_POST['guess2'] : '';
         }
         ?>
         <ul>
-            <li><a href="index.php">Back</a></li>
-        </ul>  
+            <li><a href="index.php">GET Form</a></li>
+            <li><a href="post.php">POST Form</a></li>
+            <li><a href="mvc.php">MVC</a></li>
+        </ul>     
     </body>
 </html>
 

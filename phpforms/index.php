@@ -87,7 +87,9 @@
         d($_GET);
         ?>
         <ul>
+            <li><a href="index.php">GET Form</a></li>
             <li><a href="post.php">POST Form</a></li>
+            <li><a href="mvc.php">MVC</a></li>
         </ul>        
     </body>
 </html>
