@@ -122,6 +122,7 @@ $oldguess2 = isset($_POST['guess2']) ? $_POST['guess2'] : '';
             <li><a href="get.php">GET Form</a></li>
             <li><a href="post.php">POST Form</a></li>
             <li><a href="mvc.php">MVC</a></li>
+            <li><a href="filter.php">Practice filter_var()</a></li>
         </ul>     
     </body>
 </html>
