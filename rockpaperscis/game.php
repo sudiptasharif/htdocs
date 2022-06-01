@@ -10,6 +10,7 @@ if (isset($_GET['name'])) {
         header("Location: http://$host$uri/$redir_page");
         die();
     } elseif (isset($_POST['play'])) {
+        $play_result = "";
         $user_play = $_POST['user_play'] + 0;
         if ($user_play > 0 && $user_play < 4) {
             $computer_play = rand(1, 3);
@@ -17,8 +18,15 @@ if (isset($_GET['name'])) {
             $user_play = getPlay($user_play);
             $computer_play = getPlay($computer_play);
             $play_result = "Human=$user_play Computer=$computer_play Result=$play_result";
-        } else {
-            $play_result = 'TODO';
+        } elseif ($user_play == 4) {
+            for ($i = 1; $i <= 3; $i++) {
+                for ($j = 1; $j <= 3; $j++) {
+                    $result = check($i, $j);
+                    $computer_play = getPlay($i);  
+                    $user_play = getPlay($j);
+                    $play_result = $play_result . "Human=$user_play Computer=$computer_play Result=$result\n";                 
+                }
+            }
         }
     }
 } else {
