@@ -57,7 +57,6 @@ if (isset($_POST['login'])) {
             </p>
             <input type="submit" name="login" id="login" value="Log In"/>
             <input type="submit" name="cancel" id="cancel" value="Cancel" />
-            <a href="login.php">Reset this page</a>
             <br/>
             <span>For a password hint, view source and find a password hint in the HTML comments.</span>
             <!-- Hint: The password is the three character name of the 

@@ -10,7 +10,6 @@ if (isset($_GET['name'])) {
         header("Location: http://$host$uri/$redir_page");
         die();
     } elseif (isset($_POST['play'])) {
-        $play_result = "";
         $user_play = $_POST['user_play'] + 0;
         if ($user_play > 0 && $user_play < 4) {
             $computer_play = rand(1, 3);
@@ -19,14 +18,17 @@ if (isset($_GET['name'])) {
             $computer_play = getPlay($computer_play);
             $play_result = "Human=$user_play Computer=$computer_play Result=$play_result";
         } elseif ($user_play == 4) {
+            $play_result = "";
             for ($i = 1; $i <= 3; $i++) {
                 for ($j = 1; $j <= 3; $j++) {
                     $result = check($i, $j);
-                    $computer_play = getPlay($i);  
+                    $computer_play = getPlay($i);
                     $user_play = getPlay($j);
-                    $play_result = $play_result . "Human=$user_play Computer=$computer_play Result=$result\n";                 
+                    $play_result = $play_result . "Human=$user_play Computer=$computer_play Result=$result\n";
                 }
             }
+        } else {
+            $play_result = "Please select a strategy and press Play.";
         }
     }
 } else {
@@ -36,23 +38,26 @@ if (isset($_GET['name'])) {
 function check($computer, $user) {
     $ROCK = 1;
     $PAPER = 2;
-    $SCISSOR = 3;    
+    $SCISSOR = 3;
     $result = "";
+    $TIE = 'Tie';
+    $WIN = 'You Win';
+    $LOSE = 'You Lose';
     if ($computer == $user) {
-        $result = "Tie";
+        $result = $TIE;
     } elseif (($user == $ROCK) && ($computer == $SCISSOR)) {
-        $result = "You win";
+        $result = $WIN;
     } elseif (($computer == $ROCK) && ($user == $SCISSOR)) {
-        $result = "You Lose";
+        $result = $LOSE;
     } elseif (($user == $SCISSOR) && ($computer == $PAPER)) {
-        $result = "You win";
+        $result = $WIN;
     } elseif (($computer == $SCISSOR) && ($user == $PAPER)) {
-        $result = "You Lose";
+        $result = $LOSE;
     } elseif (($user == $PAPER) && ($computer == $ROCK)) {
-        $result = "You win";
+        $result = $WIN;
     } elseif (($computer == $PAPER) && ($user == $ROCK)) {
-        $result = "You Lose";
-    }  
+        $result = $LOSE;
+    }
     return $result;
 }
 
@@ -60,7 +65,7 @@ function getPlay($playId) {
     $play = "";
     if ($playId == 1) {
         $play = "Rock";
-    } elseif($playId == 2) {
+    } elseif ($playId == 2) {
         $play = "Paper";
     } elseif ($playId == 3) {
         $play = "Scissor";
@@ -87,8 +92,7 @@ function getPlay($playId) {
             <input type="submit" name="play" value="Play"/>
             <input type="submit" name="logout" value="Logout" />
         </form>
-        <pre><?=$play_result?>
-        </pre>
+        <pre><?= $play_result ?></pre>
     </body>
 </html>
 
